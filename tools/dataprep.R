@@ -47,7 +47,11 @@
     # USE keyring TO MANAGE YOUR USERNAMES AND ACCESS KEYS
 
       # THIS EXAMPLE CHUNK OF CODE IS NOT MEANT TO BE RUN IN TODAY'S DEMO
-      # GENERIC EXAMPLE
+      # con <- dbConnect(dbDriver("service", username = ,
+                         password = ,
+                         dbname = Sys.getenv("dbname"))
+      # data_raw <- dbGetQuery(con, "Select * from paste0(Sys.getenv("table_name"))")
+      # dbDisconnect(con)
     
 # 5 ADD CONFIDENTIALITY PATTERN IN GITIGNORE ####
   
