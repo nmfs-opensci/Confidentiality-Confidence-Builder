@@ -36,27 +36,18 @@
       1
       data_raw <- read_sheet(Sys.getenv("practice_link")) 
     
-  # 3b READ CSV FROM SHARED NETWORK
-  # OPTIONAL: HIDE FILE NAME USING {dotenv}
+  # 3b IF DATA ARE ON A SHARED NETWORK CONSIDER HIDING FILE NAMES USING {dotenv}
+    # SHARE THE DIRECTORY DETAILS WITH APPROVED DATA USERS VIA A .env FILE
     
-    # EDIT THE PRACTICE.ENV YOU CREATED EARLIER; 
-    # ADD A LINE: practice_directory="SPECIFIC DIRECTORY ON SHARED NETWORK"
-    
-    # load_dot_env('practice.env')
-    # data_raw <- read.csv(practice_directory)
+      # THIS CHUNK OF CODE IS NOT MEANT TO BE RUN IN TODAY'S DEMO
+      # data_raw <- read.csv(shared_directory_via_env)
 
-  # 3c READ DIRECTLY FROM ORACLE
-  # SET UP DATABASE CONNECTION TO SERVER 
-  # USING {ROracle}, {keyring}, and {dotenv}
-    
-    # EDIT THE PRACTICE.ENV YOU CREATED EARLIER; 
-    # ADD A LINE: practice_oracle="SPECIFIC DATABASE LINK YOU USE"
-     
-    # con <- dbConnect(dbDriver("Oracle"), username = key_get("MY_USERNAME"),
-    #                  password = key_get("MY_PASSWORD"),
-    #                  dbname = load_dot_env('practice_oracle'))
-    # data_raw <- dbGetQuery(con, )
-    # dbDisconnect(con)
+  # 3c IF DATA ARE ACCESSED USING DATABASES MANAGEMENT SYSTEMS, CONSIDER USING USING {DBI} OR {ROracle}
+    # SHARE THE DATABASE LINKS WITH APPROVED DATA USERS VIA A .env FILE
+    # USE keyring TO MANAGE YOUR USERNAMES AND ACCESS KEYS
+
+      # THIS EXAMPLE CHUNK OF CODE IS NOT MEANT TO BE RUN IN TODAY'S DEMO
+      # GENERIC EXAMPLE
     
 # 5 ADD CONFIDENTIALITY PATTERN IN GITIGNORE ####
   
