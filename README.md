@@ -62,7 +62,11 @@ keyring::key_set_with_value(service = "test service",
                    password = "test password")
 ```
 - Set up a credential in windows:
-   -  ADD INSTRUCTIONS HERE
+   - Go to Credential Manager
+   - Under the Windows Credentials tab select "Add a generic credential" 
+   - Enter information and click OK
+
+ADD CREDENTIAL IMAGE HERE
 
 **Step 3.3:** Bring your username and password into your code as needed with 'keyring::key_list()' and 'keyring::key_get()'
 - `keyring::key_list()` will show list of the services and usernames you have saved
