@@ -10,20 +10,18 @@ Step 2: Clone the new repository that is under your own GitHub account (this wil
 
 Step 3: Create a .env file using the methods below in PART TWO
 
-Step 4: Practice using key ring following the steps in PART THREE
+Step 4: Practice using [{keyring}]() following the steps in PART THREE
 
 Step 5: Demo how these tools could be used in a workflow using the R script called dataprep.R
 
 ## PART TWO: USING [{dotenv}](https://github.com/gaborcsardi/dotenv) TO HIDE INTERNAL LINKS:
 
-[{dotenv}](https://github.com/gaborcsardi/dotenv) provides a simple solution for teams that need to share access information internally but that information should not be committed to the repository. Learn more [here]
+[{dotenv}](https://github.com/gaborcsardi/dotenv) provides a simple solution for teams that need to share access information internally but that information should not be committed to the repository. Learn more [here](https://towardsdatascience.com/using-dotenv-to-hide-sensitive-information-in-r-8b878fa72020)
 
-Step 1: Open the Confidentaility-Confidence-Builder.Rproj in R Studio
-
-Step 2: Create a .env file. Here you will define visible public names for each sensitive piece of information
+Step 1: Create a .env file. Here you will define visible public names for each sensitive piece of information
 
 - Open a new text file
-- Add the following to the first line 'Visible_Public_Name="hidden information'
+- Add the following to the first line 'Visible_Public_Name='hidden information'
 - Add a blank line at the end of this file. If not, R will have an issue processing it
 - To prepare for today's demo, save the text file as "practice.env"
 - [More dotenv formatting details:](https://github.com/gaborcsardi/dotenv/blob/x/README.md)
