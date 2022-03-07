@@ -23,26 +23,26 @@
   #  data/
   # SAVE AND COMMIT CHANGES TO THE GITIGNORE FILE
 
-# READ IN DATA ####
+# 5 READ IN DATA ####
 
-  # 3a READ USING GOOGLESHEETS4
+  # 5a READ USING GOOGLESHEETS4
   # OPTIONAL: HIDE GROUP LINK USING {dotenv}
 
     # EDIT THE PRACTICE.ENV YOU CREATED EARLIER; 
-    # ADD A LINE: practice_link="LINK THANK WILL BE PROVIDED DURING OUR MEETING"
+    # ADD A LINE: practice_link="https://docs.google.com/spreadsheets/d/14aPqW7rpa-7EDuI-GoWmSeqifBO9rwXUntCtezO0ejQ/edit?usp=sharing"
 
       load_dot_env('practice.env')
       gs4_auth()
       1
-      data_raw <- read_sheet(Sys.getenv("practice_link")) 
+      data_raw <- read_sheet(Sys.getenv("practice_link")) # This is the mtcars data
     
-  # 3b IF DATA ARE ON A SHARED NETWORK CONSIDER HIDING FILE NAMES USING {dotenv}
+  # 5b IF DATA ARE ON A SHARED NETWORK CONSIDER HIDING FILE NAMES USING {dotenv}
     # SHARE THE DIRECTORY DETAILS WITH APPROVED DATA USERS VIA A .env FILE
     
       # THIS CHUNK OF CODE IS NOT MEANT TO BE RUN IN TODAY'S DEMO
       # data_raw <- read.csv(shared_directory_via_env)
 
-  # 3c IF DATA ARE ACCESSED USING DATABASES MANAGEMENT SYSTEMS, CONSIDER USING USING {DBI} OR {ROracle}
+  # 5c IF DATA ARE ACCESSED USING DATABASES MANAGEMENT SYSTEMS, CONSIDER USING USING {DBI} OR {ROracle}
     # SHARE THE DATABASE LINKS WITH APPROVED DATA USERS VIA A .env FILE
     # USE keyring TO MANAGE YOUR USERNAMES AND ACCESS KEYS
 
@@ -53,7 +53,7 @@
       # data_raw <- dbGetQuery(con, "Select * from paste0(Sys.getenv("table_name"))")
       # dbDisconnect(con)
     
-# 5 ADD CONFIDENTIALITY PATTERN IN GITIGNORE ####
+# 6 ADD CONFIDENTIALITY PATTERN IN GITIGNORE ####
   
   # CREATE A NEW LINE IN THE GITIGNORE FILE
   # ADD COMMENT AND PATTERN 
@@ -62,17 +62,17 @@
   #  *_C.
   # SAVE AND COMMIT CHANGES TO THE GITIGNORE FILE
 
-# 6 SAVE DATA ####
-  
+# 7 SAVE DATA WITHOUT PUSHING TO GITHUB ####
+
   # BUILD RAW DATA REFERENCE NAME (USE CONFIDENTIALITY PATTERN)
-    data_raw.ref <- paste("data_raw", format(Sys.Date(),"%Y%m%d"), "C", sep = "_")
+    write.ref <- paste("data_raw", format(Sys.Date(),"%Y%m%d"), "C", sep = "_")
     
-  # 6a SAVE ONE FILE AS CSV
+  # 7a SAVE ONE FILE AS CSV
     write.csv(data_raw, here("data", paste0(write.ref,".csv")))
     
-  # 6b SAVE ONE FILE AS .RDATA 
+  # 7b SAVE ONE FILE AS .RDATA 
   # NOTE THAT .RDATA IS INCLUDED IN DEFAULT R GITIGNORE (BUT .RDA IS NOT)
     save(data_raw, here("data", paste0(write.ref,".RData")))
   
-  # 6c SAVE WORKSPACE
-    # save.image(data_raw, here("data", paste0(write.ref,".RData")))
+  # 7c SAVE WORKSPACE
+    save.image(data_raw, here("data", paste0(write.ref,".RData")))
