@@ -48,8 +48,8 @@
 
       # THIS EXAMPLE CHUNK OF CODE IS NOT MEANT TO BE RUN IN TODAY'S DEMO
       # con <- dbConnect(dbDriver("test service", username = key_list("test service")$username,
-                         password = key_get("test service", key_list("test service")$username),
-                         dbname = Sys.getenv("dbname"))
+      #                   password = key_get("test service", key_list("test service")$username),
+      #                   dbname = Sys.getenv("dbname"))
       # data_raw <- dbGetQuery(con, "Select * from paste0(Sys.getenv("table_name"))")
       # dbDisconnect(con)
     
