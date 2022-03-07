@@ -71,7 +71,7 @@ ADD CREDENTIAL IMAGE HERE
 **Step 3.3:** Bring your username and password into your code as needed with 'keyring::key_list()' and 'keyring::key_get()'
 - `keyring::key_list()` will show list of the services and usernames you have saved
 - `keyring::key_list("test service")$username` will give you just the username
-- `keyring::get_key("test service", "test username")` will provide the password associated with a given service and username
+- `keyring::key_get("test service", "test username")` will provide the password associated with a given service and username
 
 
 
