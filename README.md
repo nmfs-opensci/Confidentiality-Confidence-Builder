@@ -48,7 +48,7 @@ This method is suited for storing personal information that individuals on a tea
 
 "Each keyring can contain one or many secrets (keys). A key is defined by a service name and a password. Once a key is defined, it persists in the keyring store of the operating system. This means the keys persist beyond the termination of and R session. Specifically, you can define a key once, and then read the key value in completely independent R sessions... Note that all platforms have a default keyring, and key_get(), etc. will use that automatically."
 
-**Step 3.1: ** Open a new R script. Install and load the keyring package.
+**Step 3.1:** Open a new R script. Install and load the keyring package.
 ```
 install.packages("keyring")
 library(keyring)
