@@ -30,16 +30,16 @@ Step 1: Create a .env file. Here you will define visible public names for each s
     - You cannot mix variable definitions and comments in the same line
     - Empty lines (containing whitespace only) are ignored
 
-STEP 3: Make sure the .env file is not committed to the repository by adding '*.env' to a new line in the .gitignore file in your project folder
+Step 2: Make sure the .env file is not committed to the repository by adding '*.env' to a new line in the .gitignore file in your project folder
 
-STEP 4: Ensure your .env file has the correct file type and is in the correct working directory (in the project’s top level folder, or root directory)
+Step 3: Ensure your .env file has the correct file type and is in the correct working directory (in the project’s top level folder, or root directory)
 
-STEP 5: Open a new R script. Install and load the dotenv package. 
+Step 4: Open a new R script. Install and load the dotenv package. 
 ```
 install.packages("dotenv")
 library(dotenv)
 ```
 
-STEP 6: Load hidden sensitive information stored in .env file using `load_dot_env("practice.env")`
+Step 5: Load hidden sensitive information stored in .env file using `load_dot_env("practice.env")`
 
-STEP 7: Bring your hidden sensitive information into your global environment using `Sys.getenv("Visible_Public_Name")`
+Step 6: Bring your hidden sensitive information into your global environment using `Sys.getenv("Visible_Public_Name")`
