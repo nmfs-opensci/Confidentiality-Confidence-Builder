@@ -42,7 +42,7 @@ library(dotenv)
 
 **Step 2.5:** Bring your hidden sensitive information into your global environment using `Sys.getenv("Visible_Public_Name")`
 
-## PART THREE: USING [{keyring}](https://r-lib.github.io/keyring/index.html) TO HID PERSONAL USER NAMES AND PASSWORDS
+## PART THREE: USING [{keyring}](https://r-lib.github.io/keyring/index.html) TO HIDE PERSONAL USER NAMES AND PASSWORDS
 
 This method is suited for storing personal information that individuals on a team use to access their respective databases
 
