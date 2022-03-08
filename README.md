@@ -40,7 +40,7 @@ library(dotenv)
 
 **Step 2.4:** Load hidden sensitive information stored in .env file using `dotenv::load_dot_env("practice.env")`
 
-**Step 2.5:** Bring your hidden sensitive information into your global environment using `dotenv::Sys.getenv("Visible_Public_Name")`
+**Step 2.5:** Bring your hidden sensitive information into your global environment using `Sys.getenv("Visible_Public_Name")`
 
 ## PART THREE: USING [{keyring}](https://r-lib.github.io/keyring/index.html) TO HID PERSONAL USER NAMES AND PASSWORDS
 
