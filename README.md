@@ -21,7 +21,7 @@ This repository will help you practice using {keyring}, and {dotenv}. These are 
 **Step 2.1:** Create a .env file. Here you will define visible public names for each sensitive piece of information
 
 - Open a new text file
-- Add the following to the first line `"Visible_Public_Name"="hidden information"`
+- Add the following to the first line `Visible_Public_Name="hidden information"`
 - Add a blank line at the end of this file. If not, R will have an issue processing it
 - To prepare for today's demo, save the text file as "practice.env" in the root directory
 - [More dotenv formatting details:](https://github.com/gaborcsardi/dotenv/blob/x/README.md)
